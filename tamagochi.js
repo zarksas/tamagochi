@@ -5,7 +5,8 @@ let tamagochi = {
     mood: 3,
 
     getStatus() {
-        console.log(`Имя: ${this.name}, Еда: ${this.food}, Энергия: ${this.energy}, Настроение: ${this.mood}`);
+    
+        console.log(`Имя: ${this.name}, Еда: ${(this.food < 3) ? 'Я голоден('+ this.food + ')' : 'Я не голоден(' + this.food + ')' }, Энергия: ${this.energy < 3 ? 'Я хочу спать(' + this.energy + ')': 'Я не хочу спать(' + this.energy + ')'}, Настроение: ${this.mood < 3 ? 'Мне скучно(' + this.mood + ')': 'Мне весело(' + this.mood + ')'}`);
     },
 
     setName(newName) {
